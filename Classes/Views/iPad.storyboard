@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B3116" targetRuntime="iOS.CocoaTouch.iPad" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="Nbr-ff-sRS">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Content View Controller-->
+        <scene sceneID="E8M-Gd-8ld">
+            <objects>
+                <viewController id="Nbr-ff-sRS" customClass="ContentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gnC-zt-hfO"/>
+                        <viewControllerLayoutGuide type="bottom" id="C8L-6c-nJf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WEE-j7-2Nc">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Z4-He-ZaN" userLabel="Carousel" customClass="SwipeView">
+                                <rect key="frame" x="0.0" y="48" width="768" height="927"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Nbr-ff-sRS" id="9aA-bZ-cJW"/>
+                                    <outlet property="delegate" destination="Nbr-ff-sRS" id="Nko-Rm-U8L"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="24g-3L-UvY" userLabel="Header">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="48"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UI-MT_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xst-vl-0OQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="135" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="135" id="Vit-fa-Mqb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWc-Jb-HWz" userLabel="PrevBtn">
+                                        <rect key="frame" x="135" y="0.0" width="56" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="k85-WU-kdE"/>
+                                        </constraints>
+                                        <state key="normal" image="UI-MT_btn_prev.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" image="UI-MT_btn-touch_prev.png"/>
+                                        <connections>
+                                            <action selector="previousSelected:" destination="Nbr-ff-sRS" eventType="touchUpInside" id="3wO-Xj-OuB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bt4-oS-ptn" userLabel="NextBtn">
+                                        <rect key="frame" x="191" y="0.0" width="56" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="978-OZ-kA2"/>
+                                        </constraints>
+                                        <state key="normal" image="UI-MT_btn_next.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" image="UI-MT_btn-touch_next.png"/>
+                                        <connections>
+                                            <action selector="nextSelected:" destination="Nbr-ff-sRS" eventType="touchUpInside" id="DgV-oA-7ET"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEG-es-ank" userLabel="HomeBtn">
+                                        <rect key="frame" x="247" y="0.0" width="56" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="7Fm-ef-xaW"/>
+                                        </constraints>
+                                        <state key="normal" image="UI-MT_btn_home.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" image="UI-MT_btn-touch_home.png"/>
+                                        <connections>
+                                            <action selector="homeSelected:" destination="Nbr-ff-sRS" eventType="touchUpInside" id="fzT-8D-gBe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNu-Fd-GDF" userLabel="RefreshBtn">
+                                        <rect key="frame" x="303" y="0.0" width="56" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="rxN-bs-QXa"/>
+                                        </constraints>
+                                        <state key="normal" image="UI-MT_btn_refresh.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" image="UI-MT_btn-touch_refresh.png"/>
+                                        <connections>
+                                            <action selector="refreshSelected:" destination="Nbr-ff-sRS" eventType="touchUpInside" id="2iR-rP-DKo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Z0-Iw-aku" userLabel="EndBtn">
+                                        <rect key="frame" x="712" y="0.0" width="56" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="6A2-Vc-asv"/>
+                                        </constraints>
+                                        <state key="normal" image="UI-MT_btn_end.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="endSelected:" destination="Nbr-ff-sRS" eventType="touchUpInside" id="dzb-ay-Jni"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnN-xc-gws" userLabel="PrintBtn">
+                                        <rect key="frame" x="655" y="0.0" width="56" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="Z3C-gr-ixe"/>
+                                        </constraints>
+                                        <state key="normal" image="UI-MT_btn_print.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" image="UI-MT_btn-touch_print.png"/>
+                                        <connections>
+                                            <action selector="printSelected:" destination="Nbr-ff-sRS" eventType="touchUpInside" id="RaM-m5-l5f"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fdY-rj-ImU">
+                                        <rect key="frame" x="367" y="6" width="280" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="cHw-qR-oXP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL" returnKeyType="go"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Nbr-ff-sRS" id="JbQ-Ao-HAB"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.2955634124" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="1qk-pY-Dd6"/>
+                                    <constraint firstItem="fdY-rj-ImU" firstAttribute="leading" secondItem="CNu-Fd-GDF" secondAttribute="trailing" constant="8" id="4IM-bH-ea0"/>
+                                    <constraint firstAttribute="bottom" secondItem="bt4-oS-ptn" secondAttribute="bottom" id="5wo-zX-P6X"/>
+                                    <constraint firstAttribute="bottom" secondItem="eEG-es-ank" secondAttribute="bottom" id="COi-IR-sWw"/>
+                                    <constraint firstItem="eEG-es-ank" firstAttribute="leading" secondItem="bt4-oS-ptn" secondAttribute="trailing" id="Hs5-Fg-lVR"/>
+                                    <constraint firstItem="jWc-Jb-HWz" firstAttribute="leading" secondItem="Xst-vl-0OQ" secondAttribute="trailing" id="JdB-vh-S74"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Z0-Iw-aku" secondAttribute="trailing" id="Jmc-1i-ppH"/>
+                                    <constraint firstAttribute="bottom" secondItem="CNu-Fd-GDF" secondAttribute="bottom" id="L6I-hl-gv9"/>
+                                    <constraint firstItem="CNu-Fd-GDF" firstAttribute="leading" secondItem="eEG-es-ank" secondAttribute="trailing" id="Q0o-fS-DaC"/>
+                                    <constraint firstItem="fdY-rj-ImU" firstAttribute="top" secondItem="24g-3L-UvY" secondAttribute="top" constant="6" id="QMZ-6p-Nvu"/>
+                                    <constraint firstItem="Xst-vl-0OQ" firstAttribute="leading" secondItem="24g-3L-UvY" secondAttribute="leading" id="ScQ-E3-Ksj"/>
+                                    <constraint firstItem="CnN-xc-gws" firstAttribute="leading" secondItem="fdY-rj-ImU" secondAttribute="trailing" constant="8" id="Tjc-rM-Pcv"/>
+                                    <constraint firstAttribute="bottom" secondItem="jWc-Jb-HWz" secondAttribute="bottom" id="bpg-6h-02r"/>
+                                    <constraint firstAttribute="bottom" secondItem="0Z0-Iw-aku" secondAttribute="bottom" id="dDs-PP-3LQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="CnN-xc-gws" secondAttribute="bottom" id="mcn-6o-4Gb"/>
+                                    <constraint firstItem="0Z0-Iw-aku" firstAttribute="leading" secondItem="CnN-xc-gws" secondAttribute="trailing" constant="1" id="pkk-U2-b1B"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xst-vl-0OQ" secondAttribute="bottom" id="uwz-Ki-3o1"/>
+                                    <constraint firstItem="bt4-oS-ptn" firstAttribute="leading" secondItem="jWc-Jb-HWz" secondAttribute="trailing" id="yIQ-3h-oKR"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Acd-B0-btX" userLabel="Footer" customClass="FooterView">
+                                <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.29556341240875911" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="ggo-Jl-NLY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9Z4-He-ZaN" secondAttribute="trailing" id="1xm-XS-Lsg"/>
+                            <constraint firstItem="C8L-6c-nJf" firstAttribute="top" secondItem="Acd-B0-btX" secondAttribute="bottom" id="Cbk-Zg-dn9"/>
+                            <constraint firstItem="9Z4-He-ZaN" firstAttribute="leading" secondItem="WEE-j7-2Nc" secondAttribute="leading" id="FQ9-6n-tfy"/>
+                            <constraint firstItem="Acd-B0-btX" firstAttribute="top" secondItem="9Z4-He-ZaN" secondAttribute="bottom" id="RPQ-fY-mJB"/>
+                            <constraint firstItem="Acd-B0-btX" firstAttribute="leading" secondItem="WEE-j7-2Nc" secondAttribute="leading" id="YoX-el-p6D"/>
+                            <constraint firstAttribute="trailing" secondItem="Acd-B0-btX" secondAttribute="trailing" id="e7O-KF-qfY"/>
+                            <constraint firstAttribute="trailing" secondItem="24g-3L-UvY" secondAttribute="trailing" id="eY3-4Z-CW4"/>
+                            <constraint firstItem="24g-3L-UvY" firstAttribute="leading" secondItem="WEE-j7-2Nc" secondAttribute="leading" id="muQ-BX-qHR"/>
+                            <constraint firstItem="9Z4-He-ZaN" firstAttribute="top" secondItem="24g-3L-UvY" secondAttribute="bottom" id="tEZ-gD-9Ko"/>
+                            <constraint firstItem="24g-3L-UvY" firstAttribute="top" secondItem="gnC-zt-hfO" secondAttribute="bottom" id="vsV-iI-W1O"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="btnEnd" destination="0Z0-Iw-aku" id="eHV-ly-9D4"/>
+                        <outlet property="btnHome" destination="eEG-es-ank" id="VbK-rH-3gh"/>
+                        <outlet property="btnNext" destination="bt4-oS-ptn" id="Igs-yu-Q1K"/>
+                        <outlet property="btnPrev" destination="jWc-Jb-HWz" id="9XZ-hX-pAV"/>
+                        <outlet property="btnPrint" destination="CnN-xc-gws" id="JOd-L1-deW"/>
+                        <outlet property="btnRefresh" destination="CNu-Fd-GDF" id="ebE-R2-dY9"/>
+                        <outlet property="carouselView" destination="9Z4-He-ZaN" id="VvD-x9-hqF"/>
+                        <outlet property="endBtnWidthConstraint" destination="6A2-Vc-asv" id="ZDA-6T-Mmh"/>
+                        <outlet property="footerHeightConstraint" destination="ggo-Jl-NLY" id="5Hf-cy-8Qm"/>
+                        <outlet property="footerView" destination="Acd-B0-btX" id="zmu-hh-c1B"/>
+                        <outlet property="headerHeightConstraint" destination="1qk-pY-Dd6" id="lhm-ag-qCs"/>
+                        <outlet property="headerView" destination="24g-3L-UvY" id="PN4-Hj-1lR"/>
+                        <outlet property="homeBtnWidthConstraint" destination="7Fm-ef-xaW" id="MHP-wa-Fob"/>
+                        <outlet property="imageViewLogo" destination="Xst-vl-0OQ" id="Kdb-KR-o9c"/>
+                        <outlet property="logoImageWidthConstraint" destination="Vit-fa-Mqb" id="h2N-JH-EAX"/>
+                        <outlet property="nextBtnWidthConstraint" destination="978-OZ-kA2" id="6I2-ys-gXr"/>
+                        <outlet property="prevBtnWidthConstraint" destination="k85-WU-kdE" id="mfy-AK-WKd"/>
+                        <outlet property="printBtnWidthConstraint" destination="Z3C-gr-ixe" id="2nL-P5-8rc"/>
+                        <outlet property="refreshBtnWidthConstraint" destination="rxN-bs-QXa" id="43M-8x-u6W"/>
+                        <outlet property="textFieldHeightConstraint" destination="cHw-qR-oXP" id="YMf-id-QA2"/>
+                        <outlet property="textFieldURL" destination="fdY-rj-ImU" id="2Rw-EF-XIo"/>
+                        <segue destination="2qD-i8-UXJ" kind="modal" identifier="ScreenSaverViewControllerSegue" id="EM7-Er-1ep"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wsS-eV-fFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1674" y="1492"/>
+        </scene>
+        <!--Screen Saver View Controller-->
+        <scene sceneID="bzi-54-P7b">
+            <objects>
+                <viewController id="2qD-i8-UXJ" customClass="ScreenSaverViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wNm-zM-qCb"/>
+                        <viewControllerLayoutGuide type="bottom" id="ALW-1K-wR9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ne5-TP-Qyu">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vMG-DQ-aUc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sBT-eC-QjF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2534" y="1492"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="UI-MT_btn-touch_home.png" width="56" height="48"/>
+        <image name="UI-MT_btn-touch_next.png" width="56" height="48"/>
+        <image name="UI-MT_btn-touch_prev.png" width="56" height="48"/>
+        <image name="UI-MT_btn-touch_print.png" width="56" height="48"/>
+        <image name="UI-MT_btn-touch_refresh.png" width="56" height="48"/>
+        <image name="UI-MT_btn_end.png" width="56" height="48"/>
+        <image name="UI-MT_btn_home.png" width="56" height="48"/>
+        <image name="UI-MT_btn_next.png" width="56" height="48"/>
+        <image name="UI-MT_btn_prev.png" width="56" height="48"/>
+        <image name="UI-MT_btn_print.png" width="56" height="48"/>
+        <image name="UI-MT_btn_refresh.png" width="56" height="48"/>
+        <image name="UI-MT_logo.png" width="135" height="48"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,433 @@
+{
+    "Version": 27,
+    "Groups": [
+        {
+            "Title": "General Settings",
+            "Settings": [
+
+                {
+                    "Type": "TextField",
+                    "Title": "Admin Password",
+                    "Value": "",
+                    "Class": ["Password"],
+                    "Key": "adminPassword"
+                },
+                {
+                    "Title": "Refresh Cache",
+                    "Type": "ToggleSwitch",
+                    "Value": false,
+                    "Key": "refreshCache",
+                    "Class": ["HideInBoth"]
+                },
+                {
+                    "Title": "Device Volume",
+                    "Type": "ComboBox",
+                    "Key": "deviceVolume",
+                    "Value": 0,
+                    "Options": [
+                        {
+                            "Title": "1",
+                            "Value": 1
+                        },
+                        {
+                            "Title": "2",
+                            "Value": 2
+                        },
+                        {
+                            "Title": "3",
+                            "Value": 3
+                        },
+                        {
+                            "Title": "4",
+                            "Value": 4
+                        },
+                        {
+                            "Title": "5",
+                            "Value": 5
+                        },
+                        {
+                            "Title": "6",
+                            "Value": 6
+                        },
+                        {
+                            "Title": "7",
+                            "Value": 7
+                        },
+                        {
+                            "Title": "8",
+                            "Value": 8
+                        },
+                        {
+                            "Title": "9",
+                            "Value": 9
+                        },
+                        {
+                            "Title": "10",
+                            "Value": 10
+                        },
+                        {
+                            "Title": "11",
+                            "Value": 11
+                        },
+                        {
+                            "Title": "12",
+                            "Value": 12
+                        },
+                        {
+                            "Title": "13",
+                            "Value": 13
+                        },
+                        {
+                            "Title": "14",
+                            "Value": 14
+                        },
+                        {
+                            "Title": "15",
+                            "Value": 15
+                        },
+                        {
+                            "Title": "Mute",
+                            "Value": 0
+                        }
+                    ]
+                },
+                {
+                     "Title": "User Agent",
+                     "Type": "ComboBox",
+                     "Key": "userAgent",
+                     "Value": "default",
+                        "Options": [
+                        {
+                             "Title": "Mobile WebView",
+                             "Value": "Mozilla/5.0 (iPad; CPU OS 7_0_4 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Mobile/11B554a"
+                        },
+                        {
+                             "Title": "Mobile Safari",
+                             "Value": "Mozilla/5.0 (iPad; CPU OS 7_0_4 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11B554a Safari/9537.53"
+                        },
+                        {
+                             "Title": "Desktop Safari",
+                             "Value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.76 Safari/537.36"
+                        },
+                        {
+                             "Title": "Moki",
+                             "Value": "Mozilla/5.0 (Moki User Agent)"
+                        }
+                                 
+                    ]
+                }
+            ]
+        },
+        {
+            "Title": "Content",
+            "Settings": [
+                {
+                    "Type": "List",
+                    "Title": "Content List",
+                    "Key": "contentItems",
+                    "ItemTemplate": [
+                        {
+                            "Type": "TextField",
+                            "Class": [
+                                "URL"
+                            ],
+                            "Title": "Title",
+                            "Value": "",
+                            "Key": "title"
+                        },
+                        {
+                            "Type": "TextField",
+                            "Title": "Content URL",
+                            "Key": "content",
+                            "Value": "",
+                            "Placeholder": "http://"
+                         }
+                    ]
+                },
+                {
+                    "Title": "Reset When Idle For",
+                    "Value": 0,
+                    "Type": "ComboBox",
+                    "Class": [
+                        "Single"
+                    ],
+                    "Key": "idleTime",
+                    "Options": [
+                        {
+                            "Title": "1 Minute",
+                            "Value": 1
+                        },
+                        {
+                            "Title": "2 Minutes",
+                            "Value": 2
+                        },
+                        {
+                            "Title": "3 Minutes",
+                            "Value": 3
+                        },
+                        {
+                            "Title": "4 Minutes",
+                            "Value": 4
+                        },
+                        {
+                            "Title": "5 Minutes",
+                            "Value": 5
+                        },
+                        {
+                            "Title": "6 Minute",
+                            "Value": 6
+                        },
+                        {
+                            "Title": "7 Minutes",
+                            "Value": 7
+                        },
+                        {
+                            "Title": "8 Minutes",
+                            "Value": 8
+                        },
+                        {
+                            "Title": "9 Minutes",
+                            "Value": 9
+                        },
+                        {
+                            "Title": "10 Minutes",
+                            "Value": 10
+                        },
+                        {
+                            "Title": "11 Minute",
+                            "Value": 11
+                        },
+                        {
+                            "Title": "12 Minutes",
+                            "Value": 12
+                        },
+                        {
+                            "Title": "13 Minutes",
+                            "Value": 13
+                        },
+                        {
+                            "Title": "14 Minutes",
+                            "Value": 14
+                        },
+                        {
+                            "Title": "15 Minutes",
+                            "Value": 15
+                        },
+                        {
+                            "Title": "16 Minute",
+                            "Value": 16
+                        },
+                        {
+                            "Title": "17 Minutes",
+                            "Value": 17
+                        },
+                        {
+                            "Title": "18 Minutes",
+                            "Value": 18
+                        },
+                        {
+                            "Title": "19 Minutes",
+                            "Value": 19
+                        },
+                        {
+                            "Title": "20 Minutes",
+                            "Value": 20
+                        },
+                        {
+                            "Title": "21 Minute",
+                            "Value": 21
+                        },
+                        {
+                            "Title": "22 Minutes",
+                            "Value": 22
+                        },
+                        {
+                            "Title": "23 Minutes",
+                            "Value": 23
+                        },
+                        {
+                            "Title": "24 Minutes",
+                            "Value": 24
+                        },
+                        {
+                            "Title": "25 Minutes",
+                            "Value": 25
+                        },
+                        {
+                            "Title": "26 Minute",
+                            "Value": 26
+                        },
+                        {
+                            "Title": "27 Minutes",
+                            "Value": 27
+                        },
+                        {
+                            "Title": "28 Minutes",
+                            "Value": 28
+                        },
+                        {
+                            "Title": "29 Minutes",
+                            "Value": 29
+                        },
+                        {
+                            "Title": "30 Minutes",
+                            "Value": 30
+                        },
+                        {
+                            "Title": "No Limit",
+                            "Value": 0
+                        }
+                    ]
+                },
+                {
+                    "Title": "On Reset Go To",
+                    "Type": "ComboBox",
+                    "Value": "screensaver",
+                    "Key": "idleTimeAction",
+                    "Options": [
+                        {
+                            "Title": "Screensaver",
+                            "Value": "screensaver"
+                        },
+                        {
+                            "Title": "Home",
+                            "Value": "home"
+                        }
+                    ]
+                },
+                {
+                    "Title": "Show Loading Indicator",
+                    "Type": "ToggleSwitch",
+                    "Value": true,
+                    "Key": "showProgress"
+                }
+            ]
+        },
+        {
+            "Title": "Web Browsing",
+            "Settings": [
+                {
+                    "Title": "Allowed Domains",
+                    "Type": "List",
+                    "ItemTemplate": [
+                        {
+                            "Title": "Domain",
+                            "Type": "TextField",
+                            "Value": "",
+                            "Key": "domainUrl",
+                            "Class": [
+                                "URL",
+                                "HideInApp"
+                            ]
+                        }
+                    ],
+                    "Key": "domainUrlList"
+                },
+                {
+                    "Title": "Disallowed Site Alert",
+                    "Type": "ToggleSwitch",
+                    "Subtitle": "Displays Alert Message text when a disallowed website is accessed",
+                    "Value": false,
+                    "Key": "forbiddenSitesAlert"
+                },
+                {
+                    "Title": "Alert Message",
+                    "Type": "TextField",
+                    "Value": "You are not allowed to visit this site",
+                    "Key": "forbiddenAlertMessage"
+                }
+            ]
+        },
+        {
+            "Title": "Screensaver",
+            "Settings": [
+                {
+                    "Type": "List",
+                    "Title": "Screensaver Content List Setup",
+                    "Key": "screensaverPlaylistItems",
+                    "ItemTemplate": [
+                        {
+                            "Type": "TextField",
+                            "Class": [
+                                "URL"
+                            ],
+                            "Title": "Content URL",
+                            "Value": "",
+                            "Placeholder": "http://",
+                            "Key": "content"
+                        },
+                        {
+                            "Type": "TextField",
+                            "Title": "Content Display Duration",
+                            "Subtitle": "(in seconds)",
+                            "Value": 10,
+			    "Class": [
+                                "Numerical"
+                            ],
+                            "Key": "duration"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Title": "Layout",
+            "Settings": [
+                {
+                    "Title": "Theme Color",
+                    "Type": "TextField",
+                    "Subtitle": "Hex value",
+                    "Value": "4d4d5d",
+                    "Class": [
+                        "Color"
+                    ],
+                    "Key": "barColor"
+                },
+                {
+                    "Title": "Show MokiTouch Logo",
+                    "Type": "ToggleSwitch",
+                    "Value": true,
+                    "Key": "showLogo"
+                },
+                {
+                    "Title": "Logo Upload",
+                    "Type": "TextField",
+                    "Subtitle": "Full URL of logo image",
+                    "Class":["Content"],
+                    "Value": "",
+                    "Key": "uploadLogo"
+                },
+                {
+                    "Type": "ToggleSwitch",
+                    "Title": "Show Navigation Buttons",
+                    "Value": true,
+                    "Key": "showNavButtons"
+                },
+		{
+                    "Title": "Show Print Button",
+                    "Type": "ToggleSwitch",
+                    "Value": true,
+                    "Key": "showPrint"
+                },
+		{
+                    "Title": "Show End Session Button",
+                    "Type": "ToggleSwitch",
+                    "Value": true,
+                    "Key": "showEndSession"
+                },
+                {
+                    "Title": "Show Address Bar",
+                    "Type": "ToggleSwitch",
+                    "Value": true,
+                    "Key": "showAddressBar"
+                },
+                {
+                    "Title": "Show Kiosk Content Bar",
+                    "Type": "ToggleSwitch",
+                    "Value": true,
+                    "Key": "showBottomBar"
+                }
+            ]
+        }
+    ]
+}
