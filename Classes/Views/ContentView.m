@@ -165,10 +165,14 @@ extern NSString *const MTBlankContentURLForWebView;
 }
 
 - (void) moviePlayBackDidFinish:(NSNotification*)notification  {
-    // Remove observer
-    [[NSNotificationCenter  defaultCenter] removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
     if ([self.delegate respondsToSelector:@selector(showNextItem)]) {
+        // Remove observer
+        [[NSNotificationCenter  defaultCenter] removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
         [self.delegate showNextItem];
+    }
+    else
+    {
+        [_moviePlayer play];
     }
 }
 
