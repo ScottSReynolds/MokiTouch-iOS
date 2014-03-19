@@ -1,6 +1,6 @@
 MokiTouch
 =========
-**Important: An active subscription to [Tracker](https://www.mokimanage.com/) to connect Tracker services.**
+**Important: An active subscription to [Manager](https://www.mokimanage.com/) is required to connect to Manager services.**
 
 MokiTouch is a kiosk application developed by Moki to demonstrate the power of our MokiManage SDK. Our Application Settings Management tools are used to provide a variety of kiosk customization to users across multiple accounts. Our support feature set is also included. All settings can be managed remotely from our web interface on a per device or per device group basis. This is a brief overview on how MokiManage is integrated with MokiTouch and to show how to easily add MokiManage into any app.
 
